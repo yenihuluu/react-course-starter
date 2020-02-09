@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-red-color: #e06262;
+} /*buat variabel namanya --main-red-color */
+
+.main-red-color {
+  color: var(--main-red-color);
+} /*.main-red-color merupakan style yg berisi variabel --main-red-color. style tersebut bisa digunakan berulang-ulang. class ini nanti bisa di panggil dalam html*/
+
 html {
   font-size: 10px;
 }
@@ -35,4 +43,31 @@ html {
 .frame {
   border: 1px solid #484848;
   height: 100%;
+
+  display: flex; /*apapun yg di isi didalam frame ini akan jika ditambah itemnya maka item bertambah ke bawah */
+  flex-direction: column;
+}
+
+.header {
+  display: flex; /*default nya dlm bentuk row horizontal*/
+  /*flexbox yt sebuah layout aging dlm css yg memudahkan kita utk melayout 1 atau lebih elemen html tanpa harus memikirkan flexibilitas dalam elemen nya.*/
+  align-items: flex-start; /*secara vertikal items tersebut akan di mulai dari atas*/
+}
+
+.header-title {
+  flex: 1; /*mengambil sisa space semaksimal mungkin*/
+  text-align: center;
+  font-size: 3.6rem;
+  font-family: "Homemade Apple", sans-serif;
+  text-transform: lowercase;
+}
+.header-btn {
+  font-size: 1.8rem; /*1.8rem = 18px */
+  font-family: "Bungee", sans-serif;
+
+  padding: 24px;
+
+  background: unset;
+  border: unset;
+  outline: unset;
 }
